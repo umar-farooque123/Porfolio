@@ -1,0 +1,195 @@
+:root {
+  --accent: #8a5cff;
+  --accent-2: #5ef3d8;
+  --dark-bg: #0f2240;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  margin: 0;
+  background: linear-gradient(135deg,
+      rgba(138, 92, 255, 0.07) 0%,
+      rgba(94, 243, 216, 0.04) 45%,
+      rgba(255, 220, 180, 0.03) 100%);
+  color: #1a1a1a;
+}
+
+/* Navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #fff !important;
+  box-shadow: 0 10px 8px rgba(0, 0, 0, 0.05);
+}
+
+.navbar-brand {
+  font-weight: 700;
+}
+
+/* Hero */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 4rem 0;
+}
+
+.hero-left h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+}
+
+.highlight {
+  color: var(--accent);
+}
+
+.lead {
+  font-size: 1.1rem;
+  color: #6b7280;
+}
+
+.rounded-image {
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(32, 32, 70, 0.08);
+}
+
+/* Cards and Common */
+.feature-card,
+.hero-card,
+.contact-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+.stats .card {
+  border-radius: 10px;
+  box-shadow: none;
+}
+
+/* Section spacing */
+section {
+  padding: 6rem 0;
+}
+
+section:nth-child(even) {
+  background:linear-gradient(#ecdcf066,#ddf1ecb2) ;
+}
+
+/* Portfolio */
+.portfolio .card {
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio .card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.portfolio .card img {
+  height: 180px;
+  object-fit: cover;
+}
+
+/* CTA Section */
+.dark-cta {
+  background: var(--dark-bg);
+  color: #fff;
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.dark-cta h3 {
+  font-weight: 600;
+}
+
+.dark-cta .btn {
+  background: #fff;
+  color: var(--dark-bg);
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+/* Blog Section */
+#blog .card {
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+#blog .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Clients */
+.clients img {
+  opacity: 0.6;
+  filter: grayscale(1);
+  max-height: 40px;
+  transition: all 0.3s ease;
+}
+
+.clients img:hover {
+  filter: none;
+  opacity: 1;
+}
+
+/* Contact */
+.contact-card {
+  border-radius: 14px;
+  box-shadow: 0 20px 40px rgba(10, 10, 30, 0.08);
+}
+
+.contact-card form input,
+.contact-card form textarea {
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+.contact-card button {
+  background-color: var(--accent);
+  border: none;
+  font-weight: 600;
+  padding: 0.6rem 1.5rem;
+}
+
+/* Footer */
+footer {
+  padding: 3rem 0;
+  text-align: center;
+  color: #6b7280;
+  background: #fff;
+  border-top: 1px solid #eee;
+}
+
+/* Responsive adjustments */
+@media (min-width: 992px) {
+  .hero-left {
+    padding-right: 3rem;
+  }
+
+  .hero-left h1 {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .hero img {
+    margin-bottom: 2rem;
+  }
+}
